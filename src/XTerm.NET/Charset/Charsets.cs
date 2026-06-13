@@ -23,8 +23,8 @@ public static class Charsets
         ['c'] = "?", // FF
         ['d'] = "?", // CR
         ['e'] = "?", // LF
-        ['f'] = "°", // Degree symbol
-        ['g'] = "±", // Plus/minus
+        ['f'] = "Â°", // Degree symbol
+        ['g'] = "Â±", // Plus/minus
         ['h'] = "?", // NL
         ['i'] = "?", // VT
         ['j'] = "?", // Lower right corner
@@ -46,8 +46,8 @@ public static class Charsets
         ['z'] = "?", // Greater than or equal
         ['{'] = "?", // Pi
         ['|'] = "?", // Not equal
-        ['}'] = "£", // UK pound sign
-        ['~'] = "·"  // Bullet
+        ['}'] = "Â£", // UK pound sign
+        ['~'] = "â€¢"  // Bullet
     };
 
     /// <summary>
@@ -55,7 +55,7 @@ public static class Charsets
     /// </summary>
     public static readonly Dictionary<char, string> UK = new()
     {
-        ['#'] = "£"
+        ['#'] = "Â£"
     };
 
     /// <summary>
