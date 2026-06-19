@@ -169,6 +169,12 @@ public class Terminal
     /// </summary>
     public event EventHandler<TerminalEvents.BufferChangedEventArgs>? BufferChanged;
 
+    /// <summary>
+    /// Fired after any data is written to the terminal via <see cref="Write"/>.
+    /// Use this to detect content changes for rendering purposes.
+    /// </summary>
+    public event EventHandler? ContentChanged;
+
     public Terminal(TerminalOptions? options = null)
     {
         Options = options ?? new TerminalOptions();
@@ -255,6 +261,7 @@ public class Terminal
             return;
 
         _parser.Parse(data);
+        ContentChanged?.Invoke(this, EventArgs.Empty);
     }
 
     /// <summary>
